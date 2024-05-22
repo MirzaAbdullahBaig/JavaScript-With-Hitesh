@@ -12,7 +12,7 @@ accountEmail = "abelson@gmail.com"
 accountPassword = "3478932"
 accountCity = "3478932"
 
-console.log(accountEmail);
+console.log(accountEmail)
 
 /*
 prefer not to use "var"
