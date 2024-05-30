@@ -25,3 +25,46 @@ if (true) {
 // console.log(x)
 // console.log(y)
 // console.log(z)
+
+
+function one() {
+    const username = "Abdullah"
+
+    function two() {
+        const website = "youtube"
+        console.log(username)    
+    }
+    // console.log(website);
+    two()
+}
+
+// one()
+
+if (true) {
+    const username = "Adil"
+    if(username === "Adil") {
+        const website = " youtube"
+        // console.log(username + website);
+    }
+    // console.log(website);
+}
+// console.log(username);
+
+
+
+// Interesting Concept
+
+console.log(addone(5));
+function addone(num) {
+    return num + 1
+}
+console.log(addone(5));
+
+
+// Hoisting Concept || Function Variable ma assign hy
+
+// console.log(addtwo(5)); Hoisting Concept || Function Variable
+const addtwo = function addone(num) {
+    return num + 2
+}
+console.log(addtwo(5));
