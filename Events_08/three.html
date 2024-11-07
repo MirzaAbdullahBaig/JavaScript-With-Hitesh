@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Chai Aur JavaScript</h1>
     <div>
-        <button type="button" id="stop">Stop</button>
         <button type="button" id="start">Start</button>
+        <button type="button" id="stop">Stop</button>
     </div>
-    
+
 </body>
 <script>
-    // document.querySelector('h1').innerHTML += "Great Work!"
-    // const sayDate = () => {
-    //     const date = Date.now();
-    //     document.querySelector('h1').innerHTML = "Chai Aur JavaScript " + date
-    // }
 
-    // let intervalStop = setInterval(sayDate, 1000);
+    const sayDate = (str) => {
+        console.log(str, Date.now());
+    }
 
-    
-    // document.querySelector('div').addEventListener('click', (e) => {
-    //     if (e.target.id === 'stop') {
-    //         clearInterval(intervalStop)
-    //     }
-    //     if (e.target.id === 'start') {
-    //         clearInterval(intervalStop)
-    //         intervalStop = setInterval(sayDate, 1000, "hi")
-    //     }
-    // })
+    let intervalId = setInterval(sayDate, 1000, "Hi")
+
+    document.querySelector('#start').addEventListener('click', () => {
+        console.log("Start");
+        if (!intervalId) {
+            intervalId = setInterval(sayDate, 1000, "Hi")
+        }
+    })
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        console.log("Stop");
+        clearInterval(intervalId)
+        intervalId = null;
+    })
 </script>
+
 </html>
